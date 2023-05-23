@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>Python Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#getting_started">Getting Started</a></li>
+      <li><a class="nav-link" href="#variables_and_data_types">Variables and Data Types</a></li>
+      <li><a class="nav-link" href="#control_flow">Control Flow</a></li>
+      <li><a class="nav-link" href="#functions">Functions</a></li>
+      <li><a class="nav-link" href="#modules">Modules</a></li>
+      <li><a class="nav-link" href="#file_handling">File Handling</a></li>
+      <li><a class="nav-link" href="#exception_handling">Exception Handling</a></li>
+      <li><a class="nav-link" href="#classes_and_objects">Classes and Objects</a></li>
+      <li><a class="nav-link" href="#libraries_and_packages">Libraries and Packages</a></li>
+      <li><a class="nav-link" href="#resources">Resources</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header>Introduction</header>
+      <article>
+        <p>Python is an easy-to-learn, powerful programming language. It has efficient high-level data structures and a
+          simple but effective approach to object-oriented programming.</p>
+        <p> Python’s elegant syntax and dynamic typing,
+          together with its interpreted nature, make it an ideal language for scripting and rapid application
+          development in many areas on most platforms.</p>
+        <p> You can find an introduction to Python for scientific computing
+          at the UCSB College of Engineering website.
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="getting_started">
+      <header>Getting Started</header>
+      <article>
+        <p id="section-subtitle">Install Python:</p>
+        <p>
+          Visit the official Python website at python.org and download the latest version of Python for
+          your operating system (Windows, macOS, or Linux). Follow the installation instructions provided.
+        </p>
+
+        <p id="section-subtitle">Set Up the Development Environment:</p>
+        <p> After installing Python, you can use a text editor or an integrated
+          development environment (IDE) to write your Python code. Some popular options include Visual Studio Code,
+          PyCharm, and IDLE (comes bundled with Python).
+        </p>
+        <p id="section-subtitle">Running Python Code:</p>
+        <p>
+          Interactive Shell: Python comes with an interactive shell called the Python REPL (Read-Eval-Print
+          Loop). Open
+          the command prompt or terminal and type python to start the interactive shell. You can type Python code
+          directly and see the results immediately.
+        </p>
+        <p>Executing Scripts:
+
+
+          Write your Python code in a plain text file with a .py extension, such as my_script.py. Run
+          the script by executing python my_script.py in the command prompt or terminal. Make sure you are in the same
+          directory as the script.
+          <b>Hello, World!</b>:
+        </p>
+        <p>
+          Open your text editor or IDE and create a new Python file.
+          Type the following code:
+        <pre><code id="hello_world">
+  print("Hello, World!")
+</code></pre>
+        </p>
+        <p>
+          Save the file as hello_world.py and run it using the methods described previously. You should see the output
+          Hello, World! in the console.
+        </p>
+
+        <p id="section-subtitle">Learning Resources:</p>
+        <p>
+          Python Documentation: Explore the official Python documentation at docs.python.org for detailed information
+          about the language, standard library, and best practices.
+          Online Tutorials: Many online platforms offer Python tutorials for beginners. Websites like Codecademy, Real
+          Python, and Python.org provide comprehensive tutorials to learn Python step by step.
+          Books: There are numerous Python books available for beginners, such as "Python Crash Course" by Eric Matthes
+          and "Automate the Boring Stuff with Python" by Al Sweigart.
+        </p>
+
+        <p id="section-subtitle">Practice and Explore:</p>
+        <p>
+          Start with simple programs and gradually move on to more complex projects.
+          Experiment with different Python features, data types, control flow statements, and built-in functions.
+          Join Python communities and forums to ask questions, seek help, and share your progress.
+          Remember, practice is key to mastering any programming language. Enjoy your Python journey!
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="variables_and_data_types">
+      <header>Variables and Data Types</header>
+      <article>
+        <p id="section-subtitle">Numeric Data Types:</p>
+        <p>In Python, variables are used to store data values. The data type of a variable determines the type of data
+          it can hold. Python supports several built-in data types, including:</p>
+        <ul>
+          <li>int: Used to represent integer values.</li>
+          <li>float: Used to represent floating-point numbers with decimal places.</li>
+          <li>complex: Used to represent complex numbers in the form a + bj, where a and b are real numbers, and j is
+            the imaginary unit.</li>
+
+          <p>Example:</p>
+          <pre>
+          <code>
+  # Numeric data types
+  age = 25  # int
+  price = 9.99  # float
+  complex_num = 2 + 3j  # complex</code>
+        </pre>
+          <p id="section-subtitle">String Data Type:</p>
+          <li>str: Used to represent sequences of characters enclosed in single quotes (' ') or double quotes (" ").
+          </li>
+          <p>Example:</p>
+          <pre>
+          <code>
+  # String data type
+  name = "John Doe"  # str
+  message = 'Hello, World!'  # str</code>
+        </pre>
+          <p id="section-subtitle">Boolean Data Type:</p>
+          <li>bool: Used to represent either True or False.
+          </li>
+          <p>Example:</p>
+          <pre>
+          <code>
+  # Boolean data type
+  is_valid = True  # bool
+  is_empty = False  # bool</code>
+        </pre>
+          <p id="section-subtitle">List Data Type:</p>
+          <li>list: Used to represent an ordered collection of elements enclosed in square brackets [ ].
+          </li>
+          <p>Example:</p>
+          <pre>
+          <code>
+  # List data type
+  numbers = [1, 2, 3, 4, 5]  # list
+  names = ["Alice", "Bob", "Charlie"]  # list</code>
+        </pre>
+          <p id="section-subtitle">Tuple Data Type:</p>
+          <li>tuple: Used to represent an ordered, immutable collection of elements enclosed in parentheses ( ).
+          </li>
+          <p>Example:</p>
+          <pre>
+          <code>
+  # Tuple data type
+  coordinates = (10, 20)  # tuple
+  colors = ("red", "green", "blue")  # tuple</code>
+        </pre>
+          <p id="section-subtitle">Dictionary Data Type:</p>
+          <li>dict: Used to represent a collection of key-value pairs enclosed in curly braces { }.
+            Example:
+          </li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+          <code>
+  # Dictionary data type
+  person = {"name": "John", "age": 30, "city": "New York"}  # dict</code>
+        </pre>
+      </article>
+    </section>
+
+    <section class="main-section" id="control_flow">
+      <header>Control Flow</header>
+      <article>
+        <p>Control flow refers to the order in which statements are executed in a program. In Python, control flow is
+          managed using conditional statements (if, elif, else) and looping statements (for, while).</p>
+        <ul>
+          <li>Conditional Statements:</li>
+          <pre>
+          <code>
+  # Example 1: if statement
+  x = 10
+  if x > 0:
+      print("x is positive")
+
+  # Example 2: if-else statement
+  x = -5
+  if x > 0:
+      print("x is positive")
+  else:
+      print("x is non-positive")
+
+  # Example 3: if-elif-else statement
+  x = 0
+  if x > 0:
+      print("x is positive")
+  elif x < 0:
+      print("x is negative")
+  else:
+      print("x is zero")</code>
+        </pre>
+          <li>Looping Statements:</li>
+          <pre>
+            <code>
+  # Example 1: for loop
+  fruits = ["apple", "banana", "cherry"]
+  for fruit in fruits:
+      print(fruit)
+
+  # Example 2: while loop
+  count = 0
+  while count < 5:
+      print(count)
+      count += 1</code>
+          </pre>
+          <li>Control Statements (break and continue):</li>
+          <pre>
+            <code>
+  # Example 1: break statement
+  fruits = ["apple", "banana", "cherry", "date"]
+  for fruit in fruits:
+      if fruit == "cherry":
+          break
+      print(fruit)
+
+  # Example 2: continue statement
+  numbers = [1, 2, 3, 4, 5]
+  for number in numbers:
+      if number % 2 == 0:
+          continue
+      print(number)</code>
+          </pre>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="functions">
+      <header>Functions</header>
+      <article>
+        <p>In Python, functions are reusable blocks of code that perform a specific task. They help in organizing code,
+          improving code reusability, and promoting modular programming.</p>
+        <pre>
+          <code>
+  # Example 1: Function without parameters
+  def greet():
+      print("Hello, there!")
+      
+  # Calling the function
+  greet()  # Output: Hello, there!</code>
+        </pre>
+        <p>In the above example, we define a function called <code>greet()</code> that doesn't take any parameters. When the function
+          is called, it prints the message "Hello, there!".</p>
+        <pre>
+          <code>
+  # Example 2: Function with parameters
+  def greet(name):
+      print("Hello, " + name + "!")
+      
+  # Calling the function with arguments
+  greet("Alice")  # Output: Hello, Alice!
+  greet("Bob")    # Output: Hello, Bob!</code>
+        </pre>
+        <p>In this example, the function <code>greet()</code> takes a parameter name. When the function is called, we pass an
+          argument to the function representing the name. The function then prints the personalized greeting using the
+          provided name.</p>
+        <pre>
+          <code>
+  # Example 3: Function with return statement
+  def add_numbers(x, y):
+      sum = x + y
+      return sum
+      
+  # Calling the function and storing the result in a variable
+  result = add_numbers(5, 3)
+  print(result)  # Output: 8</code>
+        </pre>
+        <p>In this example, the function <code>add_numbers()</code> takes two parameters x and y and returns their sum using the
+          return statement. We call the function with arguments 5 and 3 and store the returned value in the variable
+          result. Finally, we print the value of result, which is 8.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="modules">
+      <header>Modules</header>
+      <article>
+        <p>In Python, modules are files that contain Python code, including variables, functions, and classes. They
+          allow you to organize and reuse code by breaking it into separate files.</p>
+        <pre>
+      <code>
+  # Example: Importing a module
+  import math
+  Using functions from the math module
+  print(math.sqrt(25)) # Output: 5.0
+  print(math.pi) # Output: 3.141592653589793</code>
+        </pre>
+        <p>In the above example, we import the math module using the <code>import</code> statement. The math module
+          provides various mathematical functions and constants. We can use the functions from the math module by
+          prefixing them with <code>math.</code>.</p>
+        <pre>
+<code>
+  Example: Importing specific functions from a module
+  from random import randint, choice
+
+  Using the imported functions
+  print(randint(1, 10)) # Output: Random integer between 1 and 10
+  print(choice(['apple', 'banana'])) # Output: Randomly chosen element from the list</code>
+        </pre>
+        <p>In this example, we use the <code>from module import function</code> syntax to import specific functions from
+          the random module. This allows us to use the functions directly without the need to prefix the module name.
+        </p>
+        <p>You can also create your own modules by defining Python code in separate files and importing them into your
+          programs.</p>
+        <pre>
+<code>
+  Example: Creating and using a custom module
+  File: mymodule.py
+  def greet(name):
+  print("Hello, " + name + "!")
+
+  File: main.py
+  import mymodule
+
+  mymodule.greet("Alice") # Output: Hello, Alice!</code>
+      </pre>
+        <p>In this example, we have a custom module called <code>mymodule.py</code> that contains a function
+          <code>greet()</code>. We import the <code>mymodule</code> module into the <code>main.py</code> file and use
+          the <code>greet()</code> function to print a greeting.
+        </p>
+
+      </article>
+    </section>
+
+
+    <section class="main-section" id="file_handling">
+      <header>File Handling</header>
+      <article>
+        <p>In Python, file handling allows you to work with files, such as reading from or writing to them. It enables
+          you to perform tasks like opening files, reading their contents, writing data to them, and closing them when
+          you're done.</p>
+        <p>Here are some examples of common file handling operations:</p>
+        <pre>
+      <code>
+  # Example: Opening and reading a file
+  file = open("data.txt", "r")  # Open file in read mode
+  Read the contents of the file
+  contents = file.read()
+
+  Print the contents
+  print(contents)
+
+  Close the file
+  file.close()</code>
+  </pre>
+        <p>In the above example, we open a file named "data.txt" in read mode using the <code>open()</code> function. We
+          read the contents of the file using the <code>read()</code> method and store them in the <code>contents</code>
+          variable. Finally, we print the contents and close the file using the <code>close()</code> method.</p>
+        <pre>
+<code>
+  Example: Writing to a file
+  file = open("output.txt", "w") # Open file in write mode
+
+  Write data to the file
+  file.write("Hello, world!")
+
+  Close the file
+  file.close()</code>
+  </pre>
+        <p>In this example, we open a file named "output.txt" in write mode. We write the string "Hello, world!" to the
+          file using the <code>write()</code> method. Finally, we close the file.</p>
+        <p>It's important to note that when opening a file, you should always close it after you're done with it to free
+          up system resources. Alternatively, you can use the <code>with</code> statement, which automatically takes
+          care of closing the file for you:</p>
+        <pre>
+<code>
+  Example: Using the with statement for file handling
+  with open("data.txt", "r") as file:
+  contents = file.read()
+  print(contents)</code>
+  </pre>
+        <p>In this example, the <code>with</code> statement is used to open the file "data.txt" in read mode. The file
+          is automatically closed at the end of the block, even if an exception occurs.</p>
+        <p>File handling in Python offers various methods and modes for different file operations, such as reading line
+          by line, appending to a file, and more. You can explore the Python documentation for more details on file
+          handling operations.</p>
+
+      </article>
+    </section>
+
+
+    <section class="main-section" id="exception_handling">
+      <header>Exception Handling</header>
+      <article>
+        <p>In Python, exception handling allows you to handle and recover from errors or exceptional situations that may
+          occur during the execution of your code. By handling exceptions, you can prevent your program from crashing
+          and provide alternative paths or error messages.</p>
+        <p>Here's an example of how exception handling works:</p>
+        <pre>
+      <code>
+  # Example: Handling a specific exception
+  try:
+      # Code that may raise an exception
+      result = 10 / 0  # Raises a ZeroDivisionError
+  except ZeroDivisionError:
+      # Code to handle the specific exception
+      print("Cannot divide by zero!")</code>
+    </pre>
+        <p>In the above example, we have a <code>try</code> block that contains the code that may raise an exception. In
+          this case, we attempt to divide the number 10 by zero, which raises a <code>ZeroDivisionError</code>. We use
+          the <code>except</code> block to specify the exception we want to handle. In this case, we handle the
+          <code>ZeroDivisionError</code> and print a custom error message.
+        </p>
+        <pre>
+      <code>
+  # Example: Handling multiple exceptions
+  try:
+      # Code that may raise exceptions
+      result = int("abc")  # Raises a ValueError
+      result = 10 / 0     # Raises a ZeroDivisionError
+  except ValueError:
+      # Code to handle ValueError
+      print("Invalid input!")
+  except ZeroDivisionError:
+      # Code to handle ZeroDivisionError
+      print("Cannot divide by zero!")</code>
+    </pre>
+        <p>In this example, we have multiple <code>except</code> blocks to handle different exceptions. The code inside
+          the <code>try</code> block attempts to convert the string "abc" to an integer, which raises a
+          <code>ValueError</code>. We also attempt to divide the number 10 by zero, which raises a
+          <code>ZeroDivisionError</code>. Each exception is handled separately, and the appropriate error message is
+          printed.
+        </p>
+        <p>In addition to handling specific exceptions, you can use a generic <code>except</code> block to catch any
+          exception that is not explicitly handled:</p>
+        <pre>
+      <code>
+  # Example: Handling any exception
+  try:
+      # Code that may raise an exception
+      result = 10 / 0  # Raises a ZeroDivisionError
+  except Exception as e:
+      # Code to handle any exception
+      print("An error occurred:", str(e))</code>
+    </pre>
+        <p>In this example, the <code>except</code> block with the <code>Exception</code> keyword is used to handle any
+          exception that may occur. The <code>as e</code> part allows you to access the exception object and obtain
+          information about the error. In this case, we print a generic error message along with the error details.</p>
+        <p>Exception handling in Python provides flexibility in handling different types of errors and implementing
+          appropriate error-handling logic. It helps in creating robust and reliable code that gracefully handles
+          unexpected situations.</p>
+      </article>
+    </section>
+
+
+    <section class="main-section" id="classes_and_objects">
+      <header>Classes and Objects</header>
+      <article>
+        <p>In Python, a class is a blueprint for creating objects. It defines the properties and behaviors that an
+          object of that class will have. An object is an instance of a class, and it can have its own unique data and
+          functionality.</p>
+        <p>Here's an example of a class and its object:</p>
+        <pre>
+      <code>
+    # Example: Creating a class
+    class Car:
+        def __init__(self, make, model, year):
+            self.make = make
+            self.model = model
+            self.year = year
+
+        def drive(self):
+            print(f"Driving the {self.make} {self.model}!")
+
+    Creating an object of the Car class
+    my_car = Car("Tesla", "Model S", 2022)
+
+    Accessing object properties
+    print(my_car.make) # Output: Tesla
+    print(my_car.model) # Output: Model S
+    print(my_car.year) # Output: 2022
+
+    Calling object methods
+    my_car.drive() # Output: Driving the Tesla Model S!</code>
+  </pre>
+        <p>In the above example, we define a class called <code>Car</code> using the <code>class</code> keyword. The
+          <code>Car</code> class has three properties: <code>make</code>, <code>model</code>, and <code>year</code>. The
+          <code>init()</code> method is a special method called the constructor, which is executed when a new object is
+          created. It initializes the object's properties.
+        </p>
+        <p>The <code>drive()</code> method is a function defined within the class. It can be called on an object of the
+          <code>Car</code> class and performs a specific action.
+        </p>
+        <p>We create an object <code>my_car</code> of the <code>Car</code> class by invoking the class as if it were a
+          function, passing the required arguments to the constructor.</p>
+        <p>We can access the properties of the object using the dot notation, such as <code>my_car.make</code>,
+          <code>my_car.model</code>, and <code>my_car.year</code>. We can also call the methods of the object, such as
+          <code>my_car.drive()</code>.
+        </p>
+        <p>Classes and objects provide a way to organize and encapsulate data and related functionality, enabling the
+          creation of complex systems and code reusability.</p>
+      </article>
+    </section>
+
+
+    <section class="main-section" id="libraries_and_packages">
+      <header>Libraries and Packages</header>
+      <article>
+        <p>In Python, libraries and packages are essential for extending the functionality of the language. They provide
+          pre-written code and modules that can be imported into your programs, saving you time and effort in
+          implementing common tasks and functionalities.</p>
+        <p>A library is a collection of modules, while a module is a single file containing Python code. Modules can
+          contain functions, classes, variables, and other objects that can be used in your program.</p>
+        <p>Python's standard library comes with a wide range of modules that cover various areas, such as math, file
+          I/O, networking, and more. These modules are readily available for use and can be imported using the
+          <code>import</code> statement.</p>
+        <p>Here's an example of importing and using a module from the standard library:</p>
+        <pre>
+      <code>
+  # Example: Using the math module
+  import math
+  Using functions from the math module
+  print(math.sqrt(25)) # Output: 5.0
+  print(math.sin(math.pi/2)) # Output: 1.0</code>
+  </pre>
+        <p>In this example, we import the <code>math</code> module using the <code>import</code> statement. We can then
+          access the functions and constants provided by the module using the dot notation, such as
+          <code>math.sqrt()</code> and <code>math.sin()</code>.</p>
+        <p>In addition to the standard library, there are numerous third-party libraries and packages available for
+          Python. These libraries are developed by the Python community and cover a wide range of domains, such as web
+          development, data analysis, machine learning, and more.</p>
+        <p>To use third-party libraries, you need to install them using a package manager like <code>pip</code> and then
+          import them into your program. Here's an example:</p>
+        <pre>
+<code>
+  Example: Using a third-party library
+  import requests
+
+  Making a HTTP GET request using the requests library
+  response = requests.get('https://api.example.com/data')
+  print(response.status_code) # Output: 200</code>
+  </pre>
+        <p>In this example, we import the <code>requests</code> library, which is a popular library for making HTTP
+          requests. We use the <code>requests.get()</code> function to send a GET request to a specified URL and store
+          the response in the <code>response</code> variable.</p>
+        <p>Libraries and packages greatly enhance the capabilities of Python, allowing you to leverage existing code and
+          solutions to build powerful and efficient applications.</p>
+
+      </article>
+    </section>
+
+
+<section class="main-section" id="resources">
+  <header>Resources</header>
+  <article>
+  <ul>
+      <li><a href="https://www.python.org" target="_blank" rel="noopener">Python official website</a> - The official website of Python, where you can find the latest documentation, tutorials, and downloads.</li>
+      <li><a href="https://docs.python.org/3/tutorial" target="_blank" rel="noopener">Python Documentation</a> - The official Python documentation, which provides detailed explanations of Python's syntax, standard library, and more. Refer to this documentation for in-depth information on Python.</li>
+      <li><a href="https://realpython.com" target="_blank" rel="noopener">Real Python</a> - A website that offers a wide range of Python tutorials, articles, and resources for beginners and experienced developers alike. It covers various topics, from basic concepts to advanced techniques.</li>
+      <li><a href="https://stackoverflow.com/questions/tagged/python" target="_blank" rel="noopener">Stack Overflow</a> - A popular question-and-answer platform for programming-related questions. The Python tag on Stack Overflow has a vast collection of questions and answers that can help you troubleshoot issues and learn from the experiences of other developers.</li>
+      <li><a href="https://pypi.org" target="_blank" rel="noopener">PyPI</a> - The Python Package Index, also known as PyPI, is a repository of Python packages contributed by the community. You can search for and download various libraries and packages to enhance your Python projects.</li>
+      <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a> - A web-based hosting service for version control repositories. GitHub hosts numerous open-source Python projects that you can explore, contribute to, or use as a reference for your own projects.</li>
+    </ul>
+    <p>These resources will provide you with a wealth of information, tutorials, and examples to help you learn and master Python.</p>
+  </article>
+</section>
+
+  </main>
+
+</body>
+
+</html>
